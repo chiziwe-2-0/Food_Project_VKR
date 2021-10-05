@@ -7,12 +7,7 @@
 </head>
 <body>
 <p><h1 align="center">Eda</h1></p>
-<?php
-require_once 'connection.php'; // подключаем скрипт 
-$link = mysqli_connect($host, $user, $password, $database) 
-    or die("Error! " . mysqli_error($link));
-mysqli_close($link);
-?>
+
 <form method="GET" action="bluda.php">
 <p align="center"><input type="submit" value="Bluda"></p>
 </form>
@@ -44,6 +39,13 @@ mysqli_close($link);
 <form method="GET" action="stat.php">
 <p align="center"><input type="submit" value="Statistika"></p>
 </form>
+
+<?php
+require_once 'connection.php';
+$link = mysqli_connect($host, $user, $password, $database) 
+    or die("Error! " . mysqli_error($link));
+mysqli_close($link);
+?>
 
 </body>
 </html>
